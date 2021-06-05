@@ -1,0 +1,211 @@
+@import url('./fonts/fonts.css');
+:root {
+   --accent-color-: #18CFAB;
+}
+
+body {
+   font-family: 'Montserrat', 'Arial', sans-serif;
+   font-size: 16px;
+   line-height: 30px;
+   color: #717171;
+   box-sizing: border-box;
+}
+
+.container {
+   width: 1160px;
+   margin: 0 auto;
+}
+
+/* Кнопка */
+
+.btn {
+   color: #fff;
+   font-weight: 700;
+   font-size: 15px;
+   line-height: 60px;
+   text-transform: uppercase;
+   border-radius: 5px;
+   min-height: 60px;
+   min-width: 165px;
+   background-color: var(--accent-color-);
+   display: inline-block;
+   transition: .3s;
+}
+
+.btn-shadow {
+   box-shadow: 0 -5px #fff;
+}
+
+.btn:hover {
+   color: var(--accent-color-);
+   background-color: #fff;
+   box-shadow: 0 0 0 3px var(--accent-color-);
+}
+
+/* --------Хедер--------- */
+
+.header {
+   background: url("./img/header-bg.png") no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+}
+
+/* Меню и лого */
+
+.header__top {
+   background: rgba(94, 93, 88, 0.6);
+}
+
+.header__top-inner {
+   min-height: 120px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: relative;
+}
+
+/* Лого */
+
+.header__logo {
+   /* padding: 24px 0; */
+   margin-right: 35px;
+   cursor: pointer;
+}
+
+.logo__link {
+   display: flex;
+   align-items: center;
+}
+
+.logo__link::before {
+   content: "H";
+   position: absolute;
+   font-size: 40px;
+   line-height: 31px;
+   font-weight: 700;
+   color: #fff;
+   left: 13px;
+   top: 45px;
+}
+
+.logo__img {
+   margin-right: 7px;
+}
+
+.logo__text {
+   font-size: 32px;
+   line-height: 48px;
+   color: #fff;
+}
+
+.logo__text--bold {
+   font-weight: 700;
+   color: var(--accent-color-);
+}
+
+/* Меню */
+
+.header__menu {
+   display: flex;
+}
+
+.menu {
+   display: flex;
+   margin-right: 28px;
+}
+
+.menu__item+.menu__item {
+   margin-left: 25px;
+}
+
+.menu__link {
+   color: rgba(255, 255, 255, 0.6);
+   text-transform: uppercase;
+   line-height: 25px;
+   font-weight: 700;
+   padding: 46px 0;
+   border-bottom: 2px solid transparent;
+   transition: .3s;
+}
+
+/* Ховер эффект меню */
+
+.menu__link:hover {
+   color: var(--accent-color-);
+   border-bottom: 2px solid var(--accent-color-);
+}
+
+/* Иконка поиска */
+
+.search-icon {
+   cursor: pointer;
+   margin-top: 3px;
+}
+
+.search-icon:hover path {
+   fill: var(--accent-color-);
+   fill-opacity: 1;
+   transition: .3s;
+}
+
+/* Заголовки в хедере*/
+
+.header__bottom {
+   display: flex;
+   flex-direction: column;
+   flex-grow: 1;
+   justify-content: center;
+}
+
+.main-desc {
+   text-align: center;
+}
+
+.main-desc__title, .main-desc__slogan {
+   text-align: center;
+   font-weight: 700;
+   color: #fff;
+   text-transform: uppercase;
+}
+
+.main-desc__title {
+   margin-bottom: 22px;
+   font-size: 35px;
+}
+
+.main-desc__title--colored {
+   color: var(--accent-color-);
+}
+
+.main-desc__slogan {
+   font-size: 78px;
+   line-height: 80px;
+   margin-bottom: 22px;
+}
+
+.main-desc__subtitle {
+   font-size: 34px;
+   line-height: 38px;
+   color: #D4D4D4;
+   text-transform: capitalize;
+}
+
+/* Кнопки */
+
+.header__buttons {
+   margin-top: 132px;
+}
+
+.main-desc__btn--blue {
+   margin-left: 28px;
+   background: #00CBF6;
+}
+
+.main-desc__btn--blue:hover {
+   color: #00CBF6;
+   background-color: #fff;
+   box-shadow: 0 0 0 3px #00CBF6;
+}
