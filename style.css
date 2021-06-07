@@ -1,3 +1,4 @@
+@import url('./reset.css');
 @import url('./fonts/fonts.css');
 :root {
    --accent-color-: #18CFAB;
@@ -5,7 +6,7 @@
 
 body {
    font-family: 'Montserrat', 'Arial', sans-serif;
-   font-size: 16px;
+   font-size: 14px;
    line-height: 30px;
    color: #717171;
    box-sizing: border-box;
@@ -14,6 +15,17 @@ body {
 .container {
    width: 1160px;
    margin: 0 auto;
+}
+
+.visually-hidden {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   clip: rect(0 0 0 0);
+   overflow: hidden;
 }
 
 /* Кнопка */
@@ -42,6 +54,43 @@ body {
    box-shadow: 0 0 0 3px var(--accent-color-);
 }
 
+/* Заголовки секций */
+
+.section-title {
+   font-size: 36px;
+   line-height: 40px;
+   color: #4E4E4E;
+   position: relative;
+   text-align: center;
+}
+
+/* Полосочки под заголовками */
+
+.section-title::before, .section-title::after {
+   content: '';
+   position: absolute;
+   width: 75px;
+   height: 1px;
+   background-color: var(--accent-color-);
+}
+
+.section-title::before {
+   bottom: -26px;
+   left: calc(50% - 45px);
+}
+
+.section-title::after {
+   bottom: -30px;
+   right: calc(50% - 45px);
+}
+
+/* Подзагаловки */
+
+.subtitle {
+   font-size: 16px;
+   line-height: 40px;
+}
+
 /* --------Хедер--------- */
 
 .header {
@@ -51,6 +100,7 @@ body {
    height: 100vh;
    display: flex;
    flex-direction: column;
+   margin-bottom: 14px;
 }
 
 /* Меню и лого */
@@ -123,9 +173,10 @@ body {
 
 .menu__link {
    color: rgba(255, 255, 255, 0.6);
-   text-transform: uppercase;
+   font-size: 16px;
    line-height: 25px;
    font-weight: 700;
+   text-transform: uppercase;
    padding: 46px 0;
    border-bottom: 2px solid transparent;
    transition: .3s;
@@ -208,4 +259,133 @@ body {
    color: #00CBF6;
    background-color: #fff;
    box-shadow: 0 0 0 3px #00CBF6;
+}
+
+/* --------Оссобености---------- */
+
+.features {
+   margin-bottom: 92px;
+}
+
+.features__list {
+   display: grid;
+   grid-auto-flow: row;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: 360px;
+}
+
+.features__item {
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 24px;
+   padding-top: 235px;
+   text-transform: uppercase;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+}
+
+.features__item:nth-child(even) {
+   background-color: var(--accent-color-);
+   color: #fff;
+   background-position: center 97px;
+}
+
+.features__item:nth-child(odd) {
+   background-color: #1C2A33;
+   color: var(--accent-color-);
+   background-position: center 86px;
+}
+
+.feature--option {
+   background: url('./img/feature-option.svg') no-repeat;
+}
+
+.feature--customize {
+   background: url('./img/feature-customize.svg') no-repeat;
+}
+
+.feature--support {
+   background: url('./img/feature-support.svg') no-repeat;
+}
+
+.feature--devices {
+   background: url('./img/feature-devices.svg') no-repeat;
+}
+
+/* -------- Услуги--------- */
+
+/* Заголовок */
+
+.services {
+   margin-bottom: 91px;
+}
+
+.services__title {
+   margin-bottom: 100px;
+}
+
+/* Название табов */
+
+.services__titles-list {
+   display: flex;
+   margin-bottom: 28px;
+}
+
+.service-title {
+   flex-grow: 1;
+   background: #F8FCFE;
+   border: 1px solid #EDEFEF;
+}
+
+.service__title-text {
+   display: block;
+   width: 100%;
+   text-align: center;
+   line-height: 73px;
+}
+
+.service-title:hover {
+   border: 1px solid var(--accent-color-);
+}
+
+.service-title.service--active {
+   background-color: var(--accent-color-);
+   border: 1px solid var(--accent-color-);
+   color: #fff;
+   position: relative;
+}
+
+.service-title.service--active::after {
+   content: '';
+   width: 24px;
+   height: 12px;
+   position: absolute;
+   bottom: -10px;
+   left: calc(50% - 12px);
+   background: url('./img/service-arrow.svg') no-repeat;
+}
+
+/* Контент табов */
+
+.service-text {
+   display: none;
+}
+
+.service-text__img {
+   object-fit: cover;
+   object-position: center;
+   width: 192px;
+   height: 139px;
+   margin-right: 15px;
+}
+
+.services__texts-list .service--active {
+   display: flex;
+}
+
+.service-text__content {
+   line-height: 24px;
+   font-weight: 300;
+   color: #777;
 }
