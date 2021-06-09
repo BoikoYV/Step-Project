@@ -18,10 +18,12 @@ servicesTitlesList.addEventListener('click', function (e) {
 
    if (e.target.tagName === 'A') {
       e.preventDefault();
+
       //табы заголовки
       selectTab(e.target.parentElement, servicesTitlesList, 'service--active');
       let id = e.target.getAttribute('href');
       let text = servicesTextsList.querySelector(id);
+
       // табы тексты
       selectTab(text, servicesTextsList, 'service--active');
    }
@@ -43,12 +45,12 @@ let prevBtn = document.querySelector('.comments__btn--prev');
 let nextBtn = document.querySelector('.comments__btn--next');
 
 nextBtn.addEventListener('click', function () {
-   scrollComment('+');
+   scrollComment(scrollRight());
 
 })
 
 prevBtn.addEventListener('click', function () {
-   scrollComment('-');
+   scrollComment(scrollLeft());
 })
 
 // Переключение по выбору аватара
@@ -69,28 +71,32 @@ commentsPhotos.addEventListener('click', function (e) {
       commentsContent.style.transform = `translateX(${-step}px)`;
 
    }
-
 })
 
+// Скролл вправо для кнопки вправо
+function scrollRight() {
+   step += 1160;
+   slideNum++;
+   if (step >= (4 * 1160)) {
+      step = 0;
+      slideNum = 1;
+   }
+   return step;
+}
+
+// Скролл влево для кнопки влево
+function scrollLeft() {
+   step -= 1160;
+   slideNum--;
+   if (step < 0) {
+      step = 3 * 1160;
+      slideNum = 4;
+   }
+   return step;
+}
 
 // прокрутка слайдов по стрелкам
-function scrollComment(op) {
-
-   if (op === '+') {
-      step += 1160;
-      slideNum++;
-      if (step >= (4 * 1160)) {
-         step = 0;
-         slideNum = 1;
-      }
-   } else {
-      step -= 1160;
-      slideNum--;
-      if (step < 0) {
-         step = 3 * 1160;
-         slideNum = 4;
-      }
-   }
+function scrollComment() {
 
    // Смещение большого слайда
    commentsContent.style.transform = `translateX(${-step}px)`;
@@ -103,72 +109,3 @@ function scrollComment(op) {
    selectTab(activeBigTab, commentsContent, 'comments--active');
 
 }
-
-
-
-let commentators = [
-   {
-      img: 'url',
-      text: 'text',
-      name: 'Hasan Ali',
-      position: 'UX Designer',
-      isActive: true,
-      screenWidth: 1160,
-   },
-   {
-      img: 'url',
-      text: 'text',
-      name: 'Marina',
-      position: 'UX Designer',
-      isActive: false,
-      screenWidth: 1160,
-   },
-   {
-      img: 'url',
-      text: 'text',
-      name: 'Denis',
-      position: 'UX Designer',
-      isActive: false,
-   },
-   {
-      img: 'url',
-      text: 'text',
-      name: 'Serhii',
-      position: 'UX Designer',
-      isActive: false,
-      screenWidth: 1160,
-   },
-   {
-      img: 'url',
-      text: 'text',
-      name: 'Hasan Ali',
-      position: 'UX Designer',
-      isActive: true,
-      screenWidth: 1160,
-   },
-   {
-      img: 'url',
-      text: 'text',
-      name: 'Marina',
-      position: 'UX Designer',
-      isActive: false,
-      screenWidth: 1160,
-   },
-   {
-      img: 'url',
-      text: 'text',
-      name: 'Denis',
-      position: 'UX Designer',
-      isActive: false,
-      screenWidth: 1160,
-   },
-   {
-      img: 'url',
-      text: 'text',
-      name: 'Serhii',
-      position: 'UX Designer',
-      isActive: false,
-      screenWidth: 1160,
-   },
-]
-
