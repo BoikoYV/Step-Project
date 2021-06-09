@@ -341,6 +341,7 @@ body {
    flex-basis: 0;
    background: #F8FCFE;
    border: 1px solid #EDEFEF;
+   transition: .3s;
 }
 
 .service__title-text {
@@ -684,7 +685,7 @@ body {
    background-position: center;
    width: 100%;
    /* height: 853px; */
-   padding: 98px 0;
+   padding: 100px 0;
    /* background-attachment: fixed; */
    background-color: rgba(3, 35, 44, 0.4);
    background-blend-mode: multiply;
@@ -696,20 +697,23 @@ body {
    justify-content: center;
    align-items: center;
    position: relative;
+   width: 1160px;
+   overflow: hidden;
 }
 
 .comments__title {
    color: #fff;
-   margin-bottom: 152px;
+   margin-bottom: 40px;
 }
 
 .comments__photos {
    display: flex;
+   padding-top: 52px;
 }
 
 .comments__photos-item {
    cursor: pointer;
-   transition: .3s;
+   transition: .4s;
 }
 
 .comments__photos-item+.comments__photos-item {
@@ -735,30 +739,46 @@ body {
 
 /* Текст комментария */
 
+.slider-line {
+   width: 1160px;
+   overflow: hidden;
+   transform: translateX(0);
+}
+
 .comments__content {
-   margin-bottom: 40px;
+   display: flex;
+   justify-content: center;
+   width: calc(1160px * 4);
+   transition: .5s ease-in-out;
+   position: relative;
+   padding-top: 60px;
 }
 
 .comments__content-item {
    display: flex;
    flex-direction: column;
-   /* justify-items: center; */
    align-items: center;
+   width: 1160px;
+   justify-content: center;
+   position: relative;
+   padding-top: 60px;
 }
 
+.comments__content-item.comments--active{
+   transform: translateX(0);
+}
 .comments__content-text {
    color: #bbb;
    line-height: 30px;
    font-weight: 300;
-   margin-bottom: 37px;
-   position: relative;
+   margin-bottom: 22px;
    text-align: center;
 }
 
-.comments__content-text::before {
+.comments__content-item::before {
    content: "";
    position: absolute;
-   top: -65px;
+   top: 0;
    left: calc(50% - 24px);
    width: 45px;
    height: 31px;
@@ -775,7 +795,7 @@ body {
 
 .comments__content-position {
    color: #bbb;
-   margin-bottom: 40px;
+   margin-bottom: 30px;
 }
 
 .comments__content-photo {
