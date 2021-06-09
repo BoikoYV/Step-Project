@@ -1,6 +1,6 @@
 'use strict'
 
-// Переключение табов(удаление/добавление активного класса)
+// Универсальная функция удаления/добавления активного класса
 function selectTab(elem, list, className) {
    let active = list.querySelector(`.${className}`);
    active.classList.remove(className);
@@ -8,7 +8,7 @@ function selectTab(elem, list, className) {
 }
 
 
-// Табы на экране наши услуги
+// -----------Табы на экране наши услуги------------
 
 let servicesTitlesList = document.querySelector('.services__titles-list');
 
@@ -30,7 +30,7 @@ servicesTitlesList.addEventListener('click', function (e) {
 
 
 
-// Слайдер
+// ----------------Слайдер комментарии---------------
 
 let step = 0;
 let slideNum = 1;
@@ -46,16 +46,14 @@ nextBtn.addEventListener('click', function () {
    scrollComment('+');
 
 })
+
 prevBtn.addEventListener('click', function () {
    scrollComment('-');
 })
 
 // Переключение по выбору аватара
-
 commentsPhotos.addEventListener('click', function (e) {
    if (e.target.tagName === 'IMG') {
-      console.log('----------');
-      console.log('активный маленький ярлык', e.target.parentElement.dataset.num);
 
       let dataNum = e.target.parentElement.dataset.num;
       let bigSlide = commentsContent.querySelector(`li[data-num="${dataNum}"]`);
@@ -64,37 +62,18 @@ commentsPhotos.addEventListener('click', function (e) {
       selectTab(e.target.parentElement, commentsPhotos, 'comments--active');
       selectTab(bigSlide, commentsContent, 'comments--active');
 
-      console.log('разница между большим слайдом и нажатым---', +dataNum - slideNum);
-
       // Смещение слайда
-      let needScrollScreen = +dataNum - slideNum;
-      scrollBigSlide(needScrollScreen);
+      let countOfSlides = +dataNum - slideNum;
       slideNum = +dataNum;
-      console.log('номер большого слайда после прокрутки', slideNum);
+      step += (countOfSlides * 1160);
+      commentsContent.style.transform = `translateX(${-step}px)`;
 
    }
 
 })
 
-function scrollBigSlide(countOfSlides) {
-   if (countOfSlides > 0) {
-      step += (countOfSlides * 1160);
-      if (step > (4 * 1160)) {
-         step = 0;
-      }
-   } else {
-      step += (countOfSlides * 1160);
-      if (step < 0) {
-         step = 3 * 1160;
-      }
-   }
-   commentsContent.style.transform = `translateX(${-step}px)`;
 
-}
-
-
-
-// прокрутка слайдов
+// прокрутка слайдов по стрелкам
 function scrollComment(op) {
 
    if (op === '+') {
