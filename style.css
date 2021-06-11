@@ -578,6 +578,12 @@ body {
    color: #8a8a8a;
 }
 
+/* Класс для скрывания картинок */
+
+.works__content-item.hide {
+   display: none;
+}
+
 /* Кнопка догрузки */
 
 .works__btn-load {
@@ -598,6 +604,27 @@ body {
 
 .works__btn-load:hover svg {
    fill: var(--accent-color-);
+}
+
+/* Спинер загрузка */
+
+.load-img img {
+   display: block;
+   margin: 0 auto 50px;
+   animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+   from {
+      transform: rotate(0deg);
+   }
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+.load-img.hide {
+   display: none;
 }
 
 /* ----------Новости------------ */
@@ -764,9 +791,10 @@ body {
    padding-top: 60px;
 }
 
-.comments__content-item.comments--active{
+.comments__content-item.comments--active {
    transform: translateX(0);
 }
+
 .comments__content-text {
    color: #bbb;
    line-height: 30px;
@@ -841,7 +869,116 @@ body {
    right: 29%;
 }
 
-/* Футер */
+/* ---------Галерея----------- */
+
+.gallery {
+   padding: 109px 0 67px;
+}
+
+.gallery__title {
+   margin-bottom: 115px;
+}
+
+.gallery__block {
+   margin-bottom: 40px;
+   min-height: 921px;
+}
+
+.gallery__item {
+   width: 378px;
+   margin-bottom: 13px;
+}
+
+.slow-show {
+   animation: showImg 2s linear;
+}
+
+@keyframes showImg {
+   from {
+      opacity: 0.5;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+/* Большие картинки */
+
+.gallery__item:not(.gallery__small) img {
+   width: 378px;
+   height: auto;
+   object-fit: cover;
+   display: block;
+}
+
+/* Средние картинки */
+
+.gallery__item-mid {
+   height: 168px;
+}
+
+/* Маленькие картинки */
+
+.gallery__item-sm {
+   height: 92px;
+}
+
+.gallery__small {
+   display: grid;
+   grid-template-columns: repeat(6, 1fr);
+   grid-template-rows: 168px 92px 92px 92px;
+   gap: 3px;
+}
+
+.gallery__small img {
+   width: 100%;
+   object-fit: cover;
+}
+
+.gallery__item-sm {
+   grid-column: span 2;
+}
+
+.gallery__item-mid {
+   grid-column: span 3;
+}
+
+/* Кнопка догрузки */
+
+.gallery__btn-load {
+   margin-left: calc(50% - 82px);
+   position: relative;
+   /* margin-top: 40px; */
+}
+
+.gallery__btn-load svg {
+   position: absolute;
+   top: 21px;
+   left: 21px;
+}
+
+.gallery__btn-load span {
+   margin-left: 25px;
+   font-size: 14px;
+}
+
+.gallery__btn-load:hover svg {
+   fill: var(--accent-color-);
+}
+
+/* Спинер загрузка */
+
+.gallery__load-img img {
+   display: block;
+   margin: 0 auto 50px;
+   animation: rotate 2s linear infinite;
+}
+
+.gallery__load-img.hide {
+   display: none;
+}
+
+/* -------Футер--------- */
 
 .footer {
    background: #22353F;
