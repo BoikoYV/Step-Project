@@ -1,5 +1,5 @@
-@import url('./reset.css');
-@import url('./fonts/fonts.css');
+@import url('reset.css');
+@import url('fonts/fonts.css');
 :root {
    --accent-color-: #18cfab;
 }
@@ -98,7 +98,7 @@ body {
 /* --------Хедер--------- */
 
 .header {
-   background: url("./img/header-bg.png") no-repeat;
+   background: url("../img/header-bg.png") no-repeat;
    background-size: cover;
    background-attachment: fixed;
    height: 100vh;
@@ -124,7 +124,6 @@ body {
 /* Лого */
 
 .header__logo {
-   /* padding: 24px 0; */
    margin-right: 35px;
    cursor: pointer;
 }
@@ -302,19 +301,19 @@ body {
 }
 
 .feature--option {
-   background: url('./img/feature-option.svg') no-repeat;
+   background: url('../img/feature-option.svg') no-repeat;
 }
 
 .feature--customize {
-   background: url('./img/feature-customize.svg') no-repeat;
+   background: url('../img/feature-customize.svg') no-repeat;
 }
 
 .feature--support {
-   background: url('./img/feature-support.svg') no-repeat;
+   background: url('../img/feature-support.svg') no-repeat;
 }
 
 .feature--devices {
-   background: url('./img/feature-devices.svg') no-repeat;
+   background: url('../img/feature-devices.svg') no-repeat;
 }
 
 /* -------- Услуги--------- */
@@ -369,7 +368,7 @@ body {
    position: absolute;
    bottom: -10px;
    left: calc(50% - 12px);
-   background: url('./img/service-arrow.svg') no-repeat;
+   background: url('../img/service-arrow.svg') no-repeat;
 }
 
 /* Контент табов */
@@ -399,9 +398,9 @@ body {
 /*-----------Лид------- */
 
 .lead {
-   background: url('./img/section-2.jpg') no-repeat;
+   background: url('../img/section-2.jpg') no-repeat;
    background-position: center 45%;
-   /* background-attachment: fixed; */
+   background-attachment: fixed;
    background-color: rgba(28, 42, 51, 0.79);
    background-blend-mode: multiply;
    width: 100%;
@@ -545,8 +544,8 @@ body {
 
 .content-block__source-img {
    position: absolute;
-   top: 13px;
-   left: 13px;
+   top: 12px;
+   left: 12px;
 }
 
 /* Иконка play */
@@ -708,12 +707,10 @@ body {
 /* ---------Комментарии----------- */
 
 .comments {
-   background: url('/img/section-3.jpg') no-repeat;
+   background: url('../img/section-3.jpg') no-repeat;
    background-position: center;
    width: 100%;
-   /* height: 853px; */
    padding: 100px 0;
-   /* background-attachment: fixed; */
    background-color: rgba(3, 35, 44, 0.4);
    background-blend-mode: multiply;
 }
@@ -810,7 +807,7 @@ body {
    left: calc(50% - 24px);
    width: 45px;
    height: 31px;
-   background: url('./img/comment-icon.svg') no-repeat;
+   background: url('../img/comment-icon.svg') no-repeat;
 }
 
 .comments__content-name {
@@ -890,7 +887,7 @@ body {
 }
 
 .slow-show {
-   animation: showImg 2s linear;
+   animation: showImg 2s ease-in;
 }
 
 @keyframes showImg {
@@ -948,7 +945,6 @@ body {
 .gallery__btn-load {
    margin-left: calc(50% - 82px);
    position: relative;
-   /* margin-top: 40px; */
 }
 
 .gallery__btn-load svg {
