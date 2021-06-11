@@ -1,7 +1,7 @@
 # Step project
 
-# Ссылка на GitLab Pages
-
+# Ссылка на GitHub Pages
+[Ссылка на GitHub Pages](https://boikoyv.github.io/Step-Project/#!)
 
 В проекте использовался нативный JavaScript. 
 
