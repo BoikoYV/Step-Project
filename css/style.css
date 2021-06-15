@@ -123,11 +123,6 @@ body {
 
 /* Лого */
 
-.header__logo {
-   margin-right: 35px;
-   cursor: pointer;
-}
-
 .logo__link {
    display: flex;
    align-items: center;
@@ -163,6 +158,7 @@ body {
 
 .header__menu {
    display: flex;
+   align-items: center;
 }
 
 .menu {
@@ -180,7 +176,7 @@ body {
    line-height: 25px;
    font-weight: 700;
    text-transform: uppercase;
-   padding: 46px 0;
+   padding: 49px 0;
    border-bottom: 2px solid transparent;
    transition: .3s;
 }
@@ -194,12 +190,21 @@ body {
 
 /* Иконка поиска */
 
+.menu__search-link {
+   padding: 42px 0;
+   border-bottom: 2px solid transparent;
+   transition: .3s;
+}
+
+.menu__search-link:hover {
+   border-bottom: 2px solid var(--accent-color-);
+}
+
 .search-icon {
-   cursor: pointer;
    margin-top: 3px;
 }
 
-.search-icon:hover path {
+.menu__search-link:hover path {
    fill: var(--accent-color-);
    fill-opacity: 1;
    transition: .3s;
@@ -404,11 +409,8 @@ body {
    background-color: rgba(28, 42, 51, 0.79);
    background-blend-mode: multiply;
    width: 100%;
-   min-height: 476px;
-   display: flex;
-   align-items: center;
+   padding: 128px 0;
    text-align: center;
-   justify-content: center;
 }
 
 .lead__title {
@@ -636,7 +638,7 @@ body {
    display: grid;
    grid-template-columns: repeat(4, 263px);
    grid-auto-rows: 280px;
-   column-gap: 35px;
+   column-gap: 36px;
    row-gap: 45px;
 }
 
@@ -881,6 +883,10 @@ body {
    min-height: 921px;
 }
 
+.gallery__block img {
+   position: relative;
+}
+
 .gallery__item {
    width: 378px;
    margin-bottom: 13px;
@@ -920,24 +926,26 @@ body {
    height: 92px;
 }
 
-.gallery__small {
+.gallery__item-list {
    display: grid;
    grid-template-columns: repeat(6, 1fr);
    grid-template-rows: 168px 92px 92px 92px;
    gap: 3px;
 }
 
-.gallery__small img {
+.gallery__item-list img {
    width: 100%;
    object-fit: cover;
 }
 
 .gallery__item-sm {
    grid-column: span 2;
+   position: relative;
 }
 
 .gallery__item-mid {
    grid-column: span 3;
+   position: relative;
 }
 
 /* Кнопка догрузки */
@@ -960,6 +968,50 @@ body {
 
 .gallery__btn-load:hover svg {
    fill: var(--accent-color-);
+}
+
+/* Ховер карточек */
+
+.img-overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   opacity: 0;
+   transition: .3s;
+}
+
+.gallery__search-link, .gallery__fullscreen-link {
+   position: absolute;
+   top: calc(50% - 12px);
+   display: block;
+   width: 27px;
+   height: 25px;
+   background-color: #14B9D5;
+   background-repeat: no-repeat;
+}
+
+.gallery__search-link:hover, .gallery__fullscreen-link:hover {
+   background-color: var(--accent-color-);
+}
+
+.gallery__search-link {
+   background-position: 50% 60%;
+   background-image: url('../img/search.svg');
+   left: 20px;
+}
+
+.gallery__fullscreen-link {
+   background-position: 50% 50%;
+   background-image: url('../img/fullscreen.svg');
+   left: 66px;
+}
+
+.gallery__item:not(.gallery__small):hover .img-overlay, 
+.gallery__item-list li:hover .img-overlay{
+   opacity: 1;
 }
 
 /* Спинер загрузка */

@@ -227,7 +227,7 @@ function filterCards() {
       // Догрузка карточек после анимации
       setTimeout(() => {
          let activeTab = document.querySelector('.filter__title--active');
-        
+
          // Догрузка картинок
          addCardsToList();
 
@@ -299,6 +299,10 @@ function addPhotos() {
    function wrapPhotoWithHtml(imgName) {
       bigGallery.innerHTML += `<li class="gallery__item slow-show">
    <img src="./img/gallery/${imgName}" alt="архитектура" class="gallery__img">
+   <div class="img-overlay">
+      <a class="gallery__search-link" href="#!"></a>
+      <a class="gallery__fullscreen-link" href="#!"></a>
+   </div>
 </li>`
    }
 

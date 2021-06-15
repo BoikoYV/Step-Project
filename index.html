@@ -35,11 +35,14 @@
                      <li class="menu__item"><a class="menu__link" href="#!">Work</a></li>
                      <li class="menu__item"><a class="menu__link" href="#!">Testimonial</a></li>
                   </ul>
-                  <svg class="search-icon" viewBox="0 0 190 190" fill="none" width="20" height="20">
-                     <path
-                        d="M131.538 80.3846C131.538 66.3021 126.533 54.2558 116.523 44.2458C106.513 34.2358 94.4672 29.2308 80.3846 29.2308C66.3021 29.2308 54.2558 34.2358 44.2458 44.2458C34.2358 54.2558 29.2308 66.3021 29.2308 80.3846C29.2308 94.4672 34.2358 106.513 44.2458 116.523C54.2558 126.533 66.3021 131.538 80.3846 131.538C94.4672 131.538 106.513 126.533 116.523 116.523C126.533 106.513 131.538 94.4672 131.538 80.3846ZM190 175.385C190 179.343 188.554 182.768 185.661 185.661C182.768 188.554 179.343 190 175.385 190C171.274 190 167.849 188.554 165.108 185.661L125.944 146.611C112.318 156.05 97.1314 160.769 80.3846 160.769C69.4992 160.769 59.0895 158.657 49.1557 154.432C39.2218 150.207 30.6581 144.498 23.4645 137.305C16.271 130.111 10.5619 121.547 6.33714 111.614C2.11238 101.68 0 91.27 0 80.3846C0 69.4992 2.11238 59.0895 6.33714 49.1557C10.5619 39.2218 16.271 30.6581 23.4645 23.4645C30.6581 16.271 39.2218 10.5619 49.1557 6.33714C59.0895 2.11238 69.4992 0 80.3846 0C91.27 0 101.68 2.11238 111.614 6.33714C121.547 10.5619 130.111 16.271 137.305 23.4645C144.498 30.6581 150.207 39.2218 154.432 49.1557C158.657 59.0895 160.769 69.4992 160.769 80.3846C160.769 97.1314 156.05 112.318 146.611 125.944L185.775 165.108C188.592 167.925 190 171.35 190 175.385Z"
-                        fill="white" fill-opacity="0.6" />
-                  </svg>
+                  <a class="menu__search-link" href="#!">
+                     <svg class="search-icon" viewBox="0 0 190 190" fill="none" width="20" height="20">
+                        <path
+                           d="M131.538 80.3846C131.538 66.3021 126.533 54.2558 116.523 44.2458C106.513 34.2358 94.4672 29.2308 80.3846 29.2308C66.3021 29.2308 54.2558 34.2358 44.2458 44.2458C34.2358 54.2558 29.2308 66.3021 29.2308 80.3846C29.2308 94.4672 34.2358 106.513 44.2458 116.523C54.2558 126.533 66.3021 131.538 80.3846 131.538C94.4672 131.538 106.513 126.533 116.523 116.523C126.533 106.513 131.538 94.4672 131.538 80.3846ZM190 175.385C190 179.343 188.554 182.768 185.661 185.661C182.768 188.554 179.343 190 175.385 190C171.274 190 167.849 188.554 165.108 185.661L125.944 146.611C112.318 156.05 97.1314 160.769 80.3846 160.769C69.4992 160.769 59.0895 158.657 49.1557 154.432C39.2218 150.207 30.6581 144.498 23.4645 137.305C16.271 130.111 10.5619 121.547 6.33714 111.614C2.11238 101.68 0 91.27 0 80.3846C0 69.4992 2.11238 59.0895 6.33714 49.1557C10.5619 39.2218 16.271 30.6581 23.4645 23.4645C30.6581 16.271 39.2218 10.5619 49.1557 6.33714C59.0895 2.11238 69.4992 0 80.3846 0C91.27 0 101.68 2.11238 111.614 6.33714C121.547 10.5619 130.111 16.271 137.305 23.4645C144.498 30.6581 150.207 39.2218 154.432 49.1557C158.657 59.0895 160.769 69.4992 160.769 80.3846C160.769 97.1314 156.05 112.318 146.611 125.944L185.775 165.108C188.592 167.925 190 171.35 190 175.385Z"
+                           fill="white" fill-opacity="0.6" />
+                     </svg>
+                  </a>
+
                </nav>
             </div>
          </div>
@@ -414,54 +417,156 @@
             <!-- Большая галерея -->
             <li class="gallery__item item-top">
                <img src="img/gallery/1.jpg" width="378" height="263" alt="архитектура" class="gallery__img">
+               <div class="img-overlay">
+                  <a class="gallery__search-link" href="#!"></a>
+                  <a class="gallery__fullscreen-link" href="#!"></a>
+               </div>
             </li>
             <li class="gallery__item item-top">
                <img src="img/gallery/4.jpg" width="378" height="380" alt="архитектура" class="gallery__img">
+               <div class="img-overlay">
+                  <a class="gallery__search-link" href="#!"></a>
+                  <a class="gallery__fullscreen-link" href="#!"></a>
+               </div>
             </li>
             <!-- Маленькая галерея -->
             <li class="gallery__item  gallery__small">
+               <ul class="gallery__item-list">
+                  <!-- 1 -->
+                  <li class="gallery__item-mid">
+                     <img src="img/gallery/smallGallery/1.jpg" width="180" height="168" alt="архитектура">
+                     <div class="img-overlay">
+                        <a class="gallery__search-link" href="#!"></a>
+                        <a class="gallery__fullscreen-link" href="#!"></a>
+                     </div>
+                  </li>
+                  <!-- 2 -->
+                  <li class="gallery__item-mid">
+                     <img src="img/gallery/smallGallery/2.jpg" width="180" height="168" alt="архитектура">
+                     <div class="img-overlay">
+                        <a class="gallery__search-link" href="#!"></a>
+                        <a class="gallery__fullscreen-link" href="#!"></a>
+                     </div>
+                  </li>
+                  <!-- 3 -->
+                  <li class="gallery__item-sm">
+                     <img src="img/gallery/smallGallery/3.jpg" width="124" height="92" alt="архитектура">
+                        <div class="img-overlay">
+                           <a class="gallery__search-link" href="#!"></a>
+                           <a class="gallery__fullscreen-link" href="#!"></a>
+                        </div>
+                  </li>
+                  <!-- 4 -->
+                  <li class="gallery__item-sm">
+                     <img src="img/gallery/smallGallery/4.jpg" width="119" height="92" alt="архитектура">
+                     <div class="img-overlay">
+                        <a class="gallery__search-link" href="#!"></a>
+                        <a class="gallery__fullscreen-link" href="#!"></a>
+                     </div>
+                  </li>
+                  <!-- 5 -->
+                  <li class="gallery__item-sm">
+                     <img src="img/gallery/smallGallery/5.jpg" width="115" height="92" alt="архитектура">
+                     <div class="img-overlay">
+                        <a class="gallery__search-link" href="#!"></a>
+                        <a class="gallery__fullscreen-link" href="#!"></a>
+                     </div>
+                  </li>
+                  <!-- 6 -->
+                  <li class="gallery__item-sm">
+                     <img src="img/gallery/smallGallery/6.jpg" width="124" height="92" alt="архитектура">
+                     <div class="img-overlay">
+                        <a class="gallery__search-link" href="#!"></a>
+                        <a class="gallery__fullscreen-link" href="#!"></a>
+                     </div>
+                  </li>
+                  <!-- 7 -->
+                  <li class="gallery__item-sm">
+                     <img src="img/gallery/smallGallery/7.jpg" width="119" height="92" alt="архитектура">
+                     <div class="img-overlay">
+                        <a class="gallery__search-link" href="#!"></a>
+                        <a class="gallery__fullscreen-link" href="#!"></a>
+                     </div>
+                  </li>
+                  <!-- 8 -->
+                  <li class="gallery__item-sm">
+                     <img src="img/gallery/smallGallery/8.jpg" width="115" height="92" alt="архитектура">
+                     <div class="img-overlay">
+                        <a class="gallery__search-link" href="#!"></a>
+                        <a class="gallery__fullscreen-link" href="#!"></a>
+                     </div>
+                  </li>
+                  <!-- 9 -->
+                  <li class="gallery__item-sm">
+                     <img src="img/gallery/smallGallery/9.jpg" width="124" height="92" alt="архитектура">
+                     <div class="img-overlay">
+                        <a class="gallery__search-link" href="#!"></a>
+                        <a class="gallery__fullscreen-link" href="#!"></a>
+                     </div>
+                  </li>
+                  <!-- 10 -->
+                  <li class="gallery__item-sm">
+                     <img src="img/gallery/smallGallery/10.jpg" width="119" height="92" alt="архитектура">
+                     <div class="img-overlay">
+                        <a class="gallery__search-link" href="#!"></a>
+                        <a class="gallery__fullscreen-link" href="#!"></a>
+                     </div>
+                  </li>
+                  <!-- 11 -->
+                  <li class="gallery__item-sm">
+                     <img src="img/gallery/smallGallery/11.jpg" width="115" height="92" alt="архитектура">
+                     <div class="img-overlay">
+                        <a class="gallery__search-link" href="#!"></a>
+                        <a class="gallery__fullscreen-link" href="#!"></a>
+                     </div>
+                  </li>
+               </ul>
 
-               <img class="gallery__item-mid " src="img/gallery/smallGallery/1.jpg" width="180" height="168"
-                  alt="архитектура">
-               <img class="gallery__item-mid" src="img/gallery/smallGallery/2.jpg" width="180" height="168"
-                  alt="архитектура">
-               <img class="gallery__item-sm" src="img/gallery/smallGallery/3.jpg" width="124" height="92"
-                  alt="архитектура">
-               <img class="gallery__item-sm" src="img/gallery/smallGallery/4.jpg" width="119" height="92"
-                  alt="архитектура">
-               <img class="gallery__item-sm" src="img/gallery/smallGallery/5.jpg" width="115" height="92"
-                  alt="архитектура">
-               <img class="gallery__item-sm" src="img/gallery/smallGallery/6.jpg" width="124" height="92"
-                  alt="архитектура">
-               <img class="gallery__item-sm" src="img/gallery/smallGallery/7.jpg" width="119" height="92"
-                  alt="архитектура">
-               <img class="gallery__item-sm" src="img/gallery/smallGallery/8.jpg" width="115" height="92"
-                  alt="архитектура">
-               <img class="gallery__item-sm" src="img/gallery/smallGallery/9.jpg" width="124" height="92"
-                  alt="архитектура">
-               <img class="gallery__item-sm" src="img/gallery/smallGallery/10.jpg" width="119" height="92"
-                  alt="архитектура">
-               <img class="gallery__item-sm" src="img/gallery/smallGallery/11.jpg" width="115" height="92"
-                  alt="архитектура">
+            <li>
+
+            </li>
+
+
+
+
 
             </li>
             <!-- Большая галерея -->
             <li class="gallery__item">
                <img src="img/gallery/2.jpg" width="378" height="263" alt="архитектура" class="gallery__img">
+               <div class="img-overlay">
+                  <a class="gallery__search-link" href="#!"></a>
+                  <a class="gallery__fullscreen-link" href="#!"></a>
+               </div>
             </li>
             <li class="gallery__item">
                <img src="img/gallery/5.jpg" width="378" height="247" alt="архитектура" class="gallery__img">
+               <div class="img-overlay">
+                  <a class="gallery__search-link" href="#!"></a>
+                  <a class="gallery__fullscreen-link" href="#!"></a>
+               </div>
             </li>
             <li class="gallery__item">
                <img src="img/gallery/8.jpg" width="363" height="373" alt="архитектура" class="gallery__img">
+               <div class="img-overlay">
+                  <a class="gallery__search-link" href="#!"></a>
+                  <a class="gallery__fullscreen-link" href="#!"></a>
+               </div>
             </li>
             <li class="gallery__item">
                <img src="img/gallery/3.jpg" width="378" height="290" alt="архитектура" class="gallery__img">
+               <div class="img-overlay">
+                  <a class="gallery__search-link" href="#!"></a>
+                  <a class="gallery__fullscreen-link" href="#!"></a>
+               </div>
             </li>
-
 
             <li class="gallery__item">
                <img src="img/gallery/6.jpg" width="378" height="254" alt="архитектура" class="gallery__img">
+               <div class="img-overlay">
+                  <a class="gallery__search-link" href="#!"></a>
+                  <a class="gallery__fullscreen-link" href="#!"></a>
+               </div>
             </li>
 
 
@@ -479,7 +584,7 @@
       </div>
 
    </section>
-   
+
    <footer class="footer">
       <p class="footer__text">© Copyright 2015 <span>theHam</span> | All Rights Reserved</p>
    </footer>
