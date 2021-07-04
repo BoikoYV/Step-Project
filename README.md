@@ -1,6 +1,6 @@
 # Step project
 
-# [Ссылка на GitHub Pages](https://boikoyv.github.io/Step-Project/#!)
+# [Ссылка на GitHub Pages](https://boikoyv.github.io/step-project/#!)
 
 В проекте использовался нативный JavaScript. 
 
