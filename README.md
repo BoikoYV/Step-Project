@@ -1,17 +1,16 @@
-# Step project
+### Ham project JS
 
-# [Ссылка на GitHub Pages](https://boikoyv.github.io/step-project/#!)
+Look project on [GitHub Pages](https://boikoyv.github.io/step-project/#!)
 
-В проекте использовался нативный JavaScript. 
+Plugins for "Gallery of best images" block:
+- "Masonry"
+- "ImagesLoaded"
 
-Для создания галереи в блоке "Gallery of best images" применялись библиотеки "Masonry" и "ImagesLoaded".
-
-# Динамические эффекты на странице:
-
-1. Переключение табов в блоке "Our Services";
-2. Генерация, догрузка при клике на кнопку "Load more" и фильтрация карточек при выборе фильтра в блоке "Our Amazing Work";
-3. Слайдер в блоке "What people say about theHam" с плавным переключением слайдов как стрелками, так и при выборе определенного аватара.
-4. Преобразование галереи с помощью библиотек "Masonry" и "ImagesLoaded", догрузка фотографий при клике на кнопку "Load more" в блоке "Gallery of best images".
-5. Имитация загрузки с сервера с помощью CSS анимации, скрытие кнопки догрузки, когда все файлы выгружены в блоках "Our Amazing Work" и "Gallery of best images";
+### JS Functional
+1. Tabs in "Our Services" block;
+2. Generation, reloading by click on the "Load more" button, filtering cards in the "Our Amazing Work" block;
+3. Slider by pure JS in the "What people say about theHam" block.
+4. Converting the gallery using the "Masonry" and "ImagesLoaded" plugins, loading photos by clicking on the "Load more" button in the "Gallery of best images" block.
+5. Simulation of loading from the server using CSS animation, hiding the reload button when all files are uploaded in the "Our Amazing Work" and "Gallery of best images" blocks;
 
 
